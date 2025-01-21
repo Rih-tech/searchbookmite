@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Search Engine</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Details</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Books List</h1>
+  </header>
 
-    <h1>Simple Search Engine</h1>
-    <input type="text" id="searchInput" placeholder="Search..." onkeyup="search()">
-    <div id="searchResults"></div>
+  <section class="book-list">
+    <!-- Book 1 Details: Mathematics 1 -->
+    <div class="book">
+      <h2>Mathematics 1</h2>
+      <img src="mathematics1.jpg" alt="Mathematics 1 Cover" class="book-cover">
+      <p><strong>Author:</strong> Author Name ( Bikas Chandra Bhui, Dipak Chatterjee & Prasun Chatterjee.)</p>
+      <p><strong>Description:</strong> A comprehensive book covering basic mathematical concepts for beginners.</p>
+      <p><strong>Shelf:</strong> 1</p>
+      <p><strong>Row:</strong> First row, right side</p>
+    </div>
 
-    <script src="search.js"></script>
+    <!-- Book 2 Details: Chemistry -->
+    <div class="book">
+      <h2>Chemistry</h2>
+      <img src="chemistry.jpg" alt="Chemistry Cover" class="book-cover">
+      <p><strong>Author:</strong> Author Name (SS Dara)</p>
+      <p><strong>Description:</strong> A detailed textbook on the fundamentals of chemistry.</p>
+      <p><strong>Shelf:</strong> 2</p>
+      <p><strong>Row:</strong> Second row, left side</p>
+    </div>
 
+    <!-- You can add more books here -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Book Website</p>
+  </footer>
 </body>
 </html>
