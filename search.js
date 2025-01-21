@@ -1,90 +1,108 @@
 const books = [
-  { title: 'Algorithm Design', shelf: 1, row: 'Left side' },
-  { title: 'Applied Thermodynamics', shelf: 2, row: 'Right side' },
-  { title: 'Basic Electrical Engineering', shelf: 1, row: 'Middle' },
-  { title: 'Civil Engineering Materials', shelf: 3, row: 'Left side' },
-  { title: 'Computer Networks', shelf: 1, row: 'Right side' },
-  { title: 'Control Systems Engineering', shelf: 2, row: 'Middle' },
-  { title: 'Digital Electronics', shelf: 4, row: 'Left side' },
-  { title: 'Electrical Machines', shelf: 5, row: 'Right side' },
-  { title: 'Engineering Mechanics', shelf: 3, row: 'Middle' },
-  { title: 'Fluid Mechanics', shelf: 6, row: 'Left side' },
-  { title: 'Heat Transfer', shelf: 2, row: 'Right side' },
-  { title: 'Linear Algebra', shelf: 7, row: 'Left side' },
-  { title: 'Machine Design', shelf: 1, row: 'Middle' },
-  { title: 'Mathematics for Engineers', shelf: 8, row: 'Right side' },
-  { title: 'Mechanical Vibrations', shelf: 9, row: 'Left side' },
-  { title: 'Microprocessors', shelf: 10, row: 'Middle' },
-  { title: 'Networking Fundamentals', shelf: 11, row: 'Left side' },
-  { title: 'Power Systems', shelf: 1, row: 'Right side' },
-  { title: 'Probability and Statistics', shelf: 12, row: 'Middle' },
-  { title: 'Solid Mechanics', shelf: 13, row: 'Left side' },
-  { title: 'Structural Analysis', shelf: 14, row: 'Right side' },
-  { title: 'Advanced Fluid Mechanics', shelf: 2, row: 'Left side' },
-  { title: 'Advanced Heat Transfer', shelf: 1, row: 'Middle' },
-  { title: 'Automation', shelf: 15, row: 'Right side' },
-  { title: 'Civil Engineering Design', shelf: 16, row: 'Left side' },
-  { title: 'Computer Architecture', shelf: 17, row: 'Right side' },
-  { title: 'Dynamics', shelf: 18, row: 'Middle' },
-  { title: 'Embedded Systems', shelf: 19, row: 'Left side' },
-  { title: 'Engineering Economics', shelf: 20, row: 'Right side' },
-  { title: 'Environmental Engineering', shelf: 21, row: 'Left side' },
-  { title: 'Geotechnical Engineering', shelf: 22, row: 'Right side' },
-  { title: 'Hydraulics', shelf: 23, row: 'Middle' },
-  { title: 'Manufacturing Processes', shelf: 24, row: 'Left side' },
-  { title: 'Materials Science', shelf: 25, row: 'Right side' },
-  { title: 'Mechanics of Solids', shelf: 26, row: 'Middle' },
-  { title: 'Nuclear Engineering', shelf: 27, row: 'Left side' },
-  { title: 'Optics', shelf: 28, row: 'Right side' },
-  { title: 'Power Electronics', shelf: 29, row: 'Middle' },
-  { title: 'Robotics', shelf: 30, row: 'Left side' },
-  { title: 'Signals and Systems', shelf: 31, row: 'Right side' },
-  { title: 'Software Engineering', shelf: 32, row: 'Middle' },
-  { title: 'Strength of Materials', shelf: 33, row: 'Left side' },
-  { title: 'Structural Dynamics', shelf: 34, row: 'Right side' },
-  { title: 'Thermodynamics', shelf: 35, row: 'Middle' },
-  { title: 'Transportation Engineering', shelf: 36, row: 'Left side' },
-  { title: 'VLSI Design', shelf: 37, row: 'Right side' },
-  { title: 'Wastewater Engineering', shelf: 38, row: 'Middle' },
-  { title: 'Wind Engineering', shelf: 39, row: 'Left side' },
-  { title: 'Computational Fluid Dynamics', shelf: 40, row: 'Right side' },
-  { title: 'Artificial Intelligence', shelf: 41, row: 'Middle' },
-  { title: 'Advanced Manufacturing', shelf: 42, row: 'Left side' },
-  { title: 'Aerospace Engineering', shelf: 43, row: 'Right side' },
-  { title: 'Big Data Engineering', shelf: 44, row: 'Middle' },
-  { title: 'Building Construction', shelf: 45, row: 'Left side' },
-  { title: 'Circuit Analysis', shelf: 46, row: 'Right side' },
-  { title: 'Engineering Materials', shelf: 47, row: 'Middle' },
-  { title: 'Engineering Mechanics', shelf: 48, row: 'Left side' },
-  { title: 'Electromagnetic Fields', shelf: 49, row: 'Right side' },
-  { title: 'Fluid Dynamics', shelf: 50, row: 'Middle' },
-  { title: 'Geotechnical Engineering', shelf: 51, row: 'Left side' },
-  { title: 'Industrial Engineering', shelf: 52, row: 'Right side' },
-  { title: 'Mechanical Engineering', shelf: 53, row: 'Middle' },
-  { title: 'Software Development', shelf: 54, row: 'Left side' },
-  { title: 'Computational Engineering', shelf: 55, row: 'Right side' },
-  { title: 'Electrical Engineering', shelf: 56, row: 'Middle' },
-  { title: 'Energy Systems', shelf: 57, row: 'Left side' },
-  { title: 'Nano-Technology', shelf: 58, row: 'Right side' },
-  { title: 'Renewable Energy', shelf: 59, row: 'Middle' },
-  { title: 'Statics', shelf: 60, row: 'Left side' },
-  { title: 'Telecommunications', shelf: 61, row: 'Right side' },
-  { title: 'Theoretical Mechanics', shelf: 62, row: 'Middle' },
-  { title: 'Transportation Systems', shelf: 63, row: 'Left side' },
-  { title: 'Environmental Systems', shelf: 64, row: 'Right side' },
-  { title: 'Geophysical Engineering', shelf: 65, row: 'Middle' },
-  { title: 'Geotechnical Engineering', shelf: 66, row: 'Left side' },
-  { title: 'Instrumentation Engineering', shelf: 67, row: 'Right side' },
-  { title: 'Mechanical Vibrations', shelf: 68, row: 'Middle' },
-  { title: 'Microelectronics', shelf: 69, row: 'Left side' },
-  { title: 'Power Distribution', shelf: 70, row: 'Right side' },
-  { title: 'Quality Engineering', shelf: 71, row: 'Middle' },
-  { title: 'Structural Mechanics', shelf: 72, row: 'Left side' },
-  { title: 'Water Resources Engineering', shelf: 73, row: 'Right side' },
-  { title: 'Welding Engineering', shelf: 74, row: 'Middle' },
-  { title: 'Wind Engineering', shelf: 75, row: 'Left side' },
-  { title: 'Advanced Structural Analysis', shelf: 76, row: 'Right
+    { title: 'Applied Thermodynamics', author: 'R.K. Rajput', shelf: 1, row: 'Left side' },
+    { title: 'Engineering Mechanics', author: 'R.S. Khurmi', shelf: 2, row: 'Right side' },
+    { title: 'Basic Electrical Engineering', author: 'V.K. Mehta', shelf: 3, row: 'Middle' },
+    { title: 'Basic Electronics Engineering', author: 'B.L. Theraja', shelf: 4, row: 'Left side' },
+    { title: 'Engineering Drawing', author: 'N.D. Bhatt', shelf: 5, row: 'Right side' },
+    { title: 'Mathematics for Engineers', author: 'B.S. Grewal', shelf: 6, row: 'Left side' },
+    { title: 'Mechanical Engineering', author: 'M.S. Mahajan', shelf: 7, row: 'Right side' },
+    { title: 'Programming in C', author: 'E. Balagurusamy', shelf: 8, row: 'Middle' },
+    { title: 'Engineering Physics', author: 'D.S. Mathur', shelf: 9, row: 'Left side' },
+    { title: 'Engineering Chemistry', author: 'Jain & Jain', shelf: 10, row: 'Right side' },
+    { title: 'Solid Mechanics', author: 'R.S. Khurmi', shelf: 11, row: 'Middle' },
+    { title: 'Introduction to Computing', author: 'P.K. Sinha', shelf: 12, row: 'Left side' },
+    { title: 'Digital Logic Design', author: 'M. Morris Mano', shelf: 13, row: 'Right side' },
+    { title: 'Fluid Mechanics', author: 'R.K. Bansal', shelf: 14, row: 'Middle' },
+    { title: 'Strength of Materials', author: 'R.S. Khurmi', shelf: 15, row: 'Left side' },
+    { title: 'Engineering Mathematics I', author: 'B.S. Grewal', shelf: 16, row: 'Right side' },
+    { title: 'Engineering Mechanics (Statics)', author: 'A.P. Boresi', shelf: 17, row: 'Middle' },
+    { title: 'Basic Civil Engineering', author: 'S.S. Bhavikatti', shelf: 18, row: 'Left side' },
+    { title: 'Electrical Engineering Fundamentals', author: 'A.E. Fitzgerald', shelf: 19, row: 'Right side' },
+    { title: 'Mechanical Engineering Materials', author: 'G.K. Lal', shelf: 20, row: 'Middle' },
+    { title: 'Introduction to Engineering', author: 'P. Mehta', shelf: 21, row: 'Left side' },
+    { title: 'Engineering Graphics', author: 'K.V. Narayana', shelf: 22, row: 'Right side' },
+    { title: 'Environmental Science and Engineering', author: 'P. Mehta', shelf: 23, row: 'Middle' },
+    { title: 'Object-Oriented Programming', author: 'E. Balagurusamy', shelf: 24, row: 'Left side' },
+    { title: 'Numerical Methods for Engineers', author: 'S. C. Chapra', shelf: 25, row: 'Right side' },
+    { title: 'Engineering Drawing', author: 'N.D. Bhatt', shelf: 26, row: 'Middle' },
+    { title: 'Engineering Physics', author: 'H.C. Verma', shelf: 27, row: 'Left side' },
+    { title: 'Electromagnetic Fields', author: 'William Hayt', shelf: 28, row: 'Right side' },
+    { title: 'Programming in C++', author: 'Bjarne Stroustrup', shelf: 29, row: 'Middle' },
+    { title: 'Mechanics of Solids', author: 'R.S. Khurmi', shelf: 30, row: 'Left side' },
+    { title: 'Engineering Thermodynamics', author: 'Y.V.C. Rao', shelf: 31, row: 'Right side' },
+    { title: 'Basic Electrical Engineering', author: 'J.B. Gupta', shelf: 32, row: 'Middle' },
+    { title: 'Engineering Mathematics II', author: 'B.S. Grewal', shelf: 33, row: 'Left side' },
+    { title: 'Theory of Machines', author: 'R.S. Khurmi', shelf: 34, row: 'Right side' },
+    { title: 'Control Systems Engineering', author: 'I.J. Nagrath', shelf: 35, row: 'Middle' },
+    { title: 'Applied Chemistry', author: 'A.K. Srivastava', shelf: 36, row: 'Left side' },
+    { title: 'Strength of Materials', author: 'R.K. Bansal', shelf: 37, row: 'Right side' },
+    { title: 'Fluid Mechanics', author: 'M.A. K. Sharma', shelf: 38, row: 'Middle' },
+    { title: 'Introduction to Engineering Materials', author: 'T.P. Rao', shelf: 39, row: 'Left side' },
+    { title: 'Electrical Machines', author: 'B.L. Theraja', shelf: 40, row: 'Right side' },
+    { title: 'Engineering Mathematics III', author: 'B.S. Grewal', shelf: 41, row: 'Middle' },
+    { title: 'Introduction to Signals and Systems', author: 'A.V. Oppenheim', shelf: 42, row: 'Left side' },
+    { title: 'Digital Circuits and Systems', author: 'M. Morris Mano', shelf: 43, row: 'Right side' },
+    { title: 'Control Systems', author: 'Norman Nise', shelf: 44, row: 'Middle' },
+    { title: 'Engineering Mechanics (Dynamics)', author: 'I.H. Shames', shelf: 45, row: 'Left side' },
+    { title: 'Electric Circuit Analysis', author: 'W.H. Hayt', shelf: 46, row: 'Right side' },
+    { title: 'Electronics Engineering', author: 'U.A. Bakshi', shelf: 47, row: 'Middle' },
+    { title: 'Fluid Mechanics and Hydraulic Machines', author: 'R.K. Bansal', shelf: 48, row: 'Left side' },
+    { title: 'Introduction to Digital Logic Design', author: 'M. Morris Mano', shelf: 49, row: 'Right side' },
+    { title: 'Environmental Engineering', author: 'S.K. Gupta', shelf: 50, row: 'Middle' }
+];
 
+// Display books on the home page
+function displayBooks() {
+    const bookListDiv = document.getElementById('bookList');
+    bookListDiv.innerHTML = '';
+    
+    // Sort books alphabetically by title
+    const sortedBooks = books.sort((a, b) => a.title.localeCompare(b.title));
+    
+    sortedBooks.forEach(book => {
+        const bookItem = document.createElement('div');
+        bookItem.classList.add('book-item');
+        
+        const bookTitle = document.createElement('h3');
+        bookTitle.innerText = book.title;
+        
+        const bookDetails = document.createElement('p');
+        bookDetails.innerHTML = `Author: ${book.author}<br>Shelf: ${book.shelf}<br>Row: ${book.row}`;
+        
+        bookItem.appendChild(bookTitle);
+        bookItem.appendChild(bookDetails);
+        
+        bookListDiv.appendChild(bookItem);
+    });
+}
+
+// Search books by title
+function searchBooks() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchTerm));
+    
+    const bookListDiv = document.getElementById('bookList');
+    bookListDiv.innerHTML = '';
+    
+    filteredBooks.forEach(book => {
+        const bookItem = document.createElement('div');
+        bookItem.classList.add('book-item');
+        
+        const bookTitle = document.createElement('h3');
+        bookTitle.innerText = book.title;
+        
+        const bookDetails = document.createElement('p');
+        bookDetails.innerHTML = `Author: ${book.author}<br>Shelf: ${book.shelf}<br>Row: ${book.row}`;
+        
+        bookItem.appendChild(bookTitle);
+        bookItem.appendChild(bookDetails);
+        
+        bookListDiv.appendChild(bookItem);
+    });
+}
+
+// Initialize book display on page load
+window.onload = displayBooks;
 
 
 
