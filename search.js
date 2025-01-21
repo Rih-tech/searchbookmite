@@ -1,26 +1,95 @@
-const data = [
-    { title: "Introduction to Algorithms", url: "#" },
-    { title: "The Pragmatic Programmer", url: "#" },
-    { title: "Clean Code", url: "#" },
-    { title: "Design Patterns", url: "#" },
-    { title: "JavaScript: The Good Parts", url: "#" },
-];
+const books = [
+  { title: 'Algorithm Design', shelf: 1, row: 'Left side' },
+  { title: 'Applied Thermodynamics', shelf: 2, row: 'Right side' },
+  { title: 'Basic Electrical Engineering', shelf: 1, row: 'Middle' },
+  { title: 'Civil Engineering Materials', shelf: 3, row: 'Left side' },
+  { title: 'Computer Networks', shelf: 1, row: 'Right side' },
+  { title: 'Control Systems Engineering', shelf: 2, row: 'Middle' },
+  { title: 'Digital Electronics', shelf: 4, row: 'Left side' },
+  { title: 'Electrical Machines', shelf: 5, row: 'Right side' },
+  { title: 'Engineering Mechanics', shelf: 3, row: 'Middle' },
+  { title: 'Fluid Mechanics', shelf: 6, row: 'Left side' },
+  { title: 'Heat Transfer', shelf: 2, row: 'Right side' },
+  { title: 'Linear Algebra', shelf: 7, row: 'Left side' },
+  { title: 'Machine Design', shelf: 1, row: 'Middle' },
+  { title: 'Mathematics for Engineers', shelf: 8, row: 'Right side' },
+  { title: 'Mechanical Vibrations', shelf: 9, row: 'Left side' },
+  { title: 'Microprocessors', shelf: 10, row: 'Middle' },
+  { title: 'Networking Fundamentals', shelf: 11, row: 'Left side' },
+  { title: 'Power Systems', shelf: 1, row: 'Right side' },
+  { title: 'Probability and Statistics', shelf: 12, row: 'Middle' },
+  { title: 'Solid Mechanics', shelf: 13, row: 'Left side' },
+  { title: 'Structural Analysis', shelf: 14, row: 'Right side' },
+  { title: 'Advanced Fluid Mechanics', shelf: 2, row: 'Left side' },
+  { title: 'Advanced Heat Transfer', shelf: 1, row: 'Middle' },
+  { title: 'Automation', shelf: 15, row: 'Right side' },
+  { title: 'Civil Engineering Design', shelf: 16, row: 'Left side' },
+  { title: 'Computer Architecture', shelf: 17, row: 'Right side' },
+  { title: 'Dynamics', shelf: 18, row: 'Middle' },
+  { title: 'Embedded Systems', shelf: 19, row: 'Left side' },
+  { title: 'Engineering Economics', shelf: 20, row: 'Right side' },
+  { title: 'Environmental Engineering', shelf: 21, row: 'Left side' },
+  { title: 'Geotechnical Engineering', shelf: 22, row: 'Right side' },
+  { title: 'Hydraulics', shelf: 23, row: 'Middle' },
+  { title: 'Manufacturing Processes', shelf: 24, row: 'Left side' },
+  { title: 'Materials Science', shelf: 25, row: 'Right side' },
+  { title: 'Mechanics of Solids', shelf: 26, row: 'Middle' },
+  { title: 'Nuclear Engineering', shelf: 27, row: 'Left side' },
+  { title: 'Optics', shelf: 28, row: 'Right side' },
+  { title: 'Power Electronics', shelf: 29, row: 'Middle' },
+  { title: 'Robotics', shelf: 30, row: 'Left side' },
+  { title: 'Signals and Systems', shelf: 31, row: 'Right side' },
+  { title: 'Software Engineering', shelf: 32, row: 'Middle' },
+  { title: 'Strength of Materials', shelf: 33, row: 'Left side' },
+  { title: 'Structural Dynamics', shelf: 34, row: 'Right side' },
+  { title: 'Thermodynamics', shelf: 35, row: 'Middle' },
+  { title: 'Transportation Engineering', shelf: 36, row: 'Left side' },
+  { title: 'VLSI Design', shelf: 37, row: 'Right side' },
+  { title: 'Wastewater Engineering', shelf: 38, row: 'Middle' },
+  { title: 'Wind Engineering', shelf: 39, row: 'Left side' },
+  { title: 'Computational Fluid Dynamics', shelf: 40, row: 'Right side' },
+  { title: 'Artificial Intelligence', shelf: 41, row: 'Middle' },
+  { title: 'Advanced Manufacturing', shelf: 42, row: 'Left side' },
+  { title: 'Aerospace Engineering', shelf: 43, row: 'Right side' },
+  { title: 'Big Data Engineering', shelf: 44, row: 'Middle' },
+  { title: 'Building Construction', shelf: 45, row: 'Left side' },
+  { title: 'Circuit Analysis', shelf: 46, row: 'Right side' },
+  { title: 'Engineering Materials', shelf: 47, row: 'Middle' },
+  { title: 'Engineering Mechanics', shelf: 48, row: 'Left side' },
+  { title: 'Electromagnetic Fields', shelf: 49, row: 'Right side' },
+  { title: 'Fluid Dynamics', shelf: 50, row: 'Middle' },
+  { title: 'Geotechnical Engineering', shelf: 51, row: 'Left side' },
+  { title: 'Industrial Engineering', shelf: 52, row: 'Right side' },
+  { title: 'Mechanical Engineering', shelf: 53, row: 'Middle' },
+  { title: 'Software Development', shelf: 54, row: 'Left side' },
+  { title: 'Computational Engineering', shelf: 55, row: 'Right side' },
+  { title: 'Electrical Engineering', shelf: 56, row: 'Middle' },
+  { title: 'Energy Systems', shelf: 57, row: 'Left side' },
+  { title: 'Nano-Technology', shelf: 58, row: 'Right side' },
+  { title: 'Renewable Energy', shelf: 59, row: 'Middle' },
+  { title: 'Statics', shelf: 60, row: 'Left side' },
+  { title: 'Telecommunications', shelf: 61, row: 'Right side' },
+  { title: 'Theoretical Mechanics', shelf: 62, row: 'Middle' },
+  { title: 'Transportation Systems', shelf: 63, row: 'Left side' },
+  { title: 'Environmental Systems', shelf: 64, row: 'Right side' },
+  { title: 'Geophysical Engineering', shelf: 65, row: 'Middle' },
+  { title: 'Geotechnical Engineering', shelf: 66, row: 'Left side' },
+  { title: 'Instrumentation Engineering', shelf: 67, row: 'Right side' },
+  { title: 'Mechanical Vibrations', shelf: 68, row: 'Middle' },
+  { title: 'Microelectronics', shelf: 69, row: 'Left side' },
+  { title: 'Power Distribution', shelf: 70, row: 'Right side' },
+  { title: 'Quality Engineering', shelf: 71, row: 'Middle' },
+  { title: 'Structural Mechanics', shelf: 72, row: 'Left side' },
+  { title: 'Water Resources Engineering', shelf: 73, row: 'Right side' },
+  { title: 'Welding Engineering', shelf: 74, row: 'Middle' },
+  { title: 'Wind Engineering', shelf: 75, row: 'Left side' },
+  { title: 'Advanced Structural Analysis', shelf: 76, row: 'Right
 
-// Function to search the data
-function search() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    const resultsDiv = document.getElementById('searchResults');
-    resultsDiv.innerHTML = ''; // Clear previous results
 
-    const filteredData = data.filter(item => item.title.toLowerCase().includes(input));
 
-    if (filteredData.length === 0) {
-        resultsDiv.innerHTML = '<p>No results found.</p>';
-    } else {
-        filteredData.forEach(item => {
-            const resultItem = document.createElement('div');
-            resultItem.innerHTML = `<a href="${item.url}" target="_blank">${item.title}</a>`;
-            resultsDiv.appendChild(resultItem);
-        });
-    }
-}
+
+
+
+
+
+
