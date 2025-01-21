@@ -60,7 +60,7 @@ h1 {
   width: 30%;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  display: none; /* Books hidden by default, shown when matched */
+  display: block;
   transition: transform 0.3s ease-in-out;
 }
 
