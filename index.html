@@ -2,171 +2,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineering Book Search Engine</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      width: 80%;
-      margin: auto;
-      padding: 20px;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    .search-container {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    #searchBar {
-      padding: 10px;
-      font-size: 16px;
-      width: 50%;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .book-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .book {
-      background-color: #e9ecef;
-      margin: 10px;
-      padding: 20px;
-      width: 30%;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      display: none; /* Hide by default */
-    }
-
-    .book h2 {
-      margin-top: 0;
-    }
-
-    .book p {
-      margin: 5px 0;
-    }
-  </style>
+  <title>Engineering Books Search</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="container">
-    <h1>Engineering Book Search Engine</h1>
-
+    <h1>Engineering Books Search</h1>
+    
     <!-- Search Bar -->
     <div class="search-container">
-      <input type="text" id="searchBar" placeholder="Search for an engineering book..." onkeyup="searchBooks()">
+      <input type="text" id="searchBar" placeholder="Search for a book..." onkeyup="searchBooks()">
     </div>
 
-    <!-- Book List Section -->
-    <section class="book-list" id="bookList">
-      <!-- Book 1 -->
-      <div class="book" data-name="Introduction to Electrical Engineering">
-        <h2>Introduction to Electrical Engineering</h2>
-        <p><strong>Shelf:</strong> 1</p>
-        <p><strong>Row:</strong> First row, left side</p>
-      </div>
-
-      <!-- Book 2 -->
-      <div class="book" data-name="Fluid Mechanics for Engineers">
-        <h2>Fluid Mechanics for Engineers</h2>
-        <p><strong>Shelf:</strong> 2</p>
-        <p><strong>Row:</strong> Second row, right side</p>
-      </div>
-
-      <!-- Book 3 -->
-      <div class="book" data-name="Engineering Mechanics">
-        <h2>Engineering Mechanics</h2>
-        <p><strong>Shelf:</strong> 3</p>
-        <p><strong>Row:</strong> First row, right side</p>
-      </div>
-
-      <!-- Book 4 -->
-      <div class="book" data-name="Mechanical Vibrations">
-        <h2>Mechanical Vibrations</h2>
-        <p><strong>Shelf:</strong> 4</p>
-        <p><strong>Row:</strong> Second row, left side</p>
-      </div>
-
-      <!-- Book 5 -->
-      <div class="book" data-name="Strength of Materials">
-        <h2>Strength of Materials</h2>
-        <p><strong>Shelf:</strong> 5</p>
-        <p><strong>Row:</strong> First row, left side</p>
-      </div>
-
-      <!-- Book 6 -->
-      <div class="book" data-name="Digital Signal Processing">
-        <h2>Digital Signal Processing</h2>
-        <p><strong>Shelf:</strong> 6</p>
-        <p><strong>Row:</strong> Second row, right side</p>
-      </div>
-
-      <!-- Book 7 -->
-      <div class="book" data-name="Engineering Thermodynamics">
-        <h2>Engineering Thermodynamics</h2>
-        <p><strong>Shelf:</strong> 7</p>
-        <p><strong>Row:</strong> First row, left side</p>
-      </div>
-
-      <!-- Book 8 -->
-      <div class="book" data-name="Advanced Engineering Mathematics">
-        <h2>Advanced Engineering Mathematics</h2>
-        <p><strong>Shelf:</strong> 8</p>
-        <p><strong>Row:</strong> First row, right side</p>
-      </div>
-
-      <!-- Book 9 -->
-      <div class="book" data-name="Control Systems Engineering">
-        <h2>Control Systems Engineering</h2>
-        <p><strong>Shelf:</strong> 9</p>
-        <p><strong>Row:</strong> Second row, left side</p>
-      </div>
-
-      <!-- Book 10 -->
-      <div class="book" data-name="Materials Science and Engineering">
-        <h2>Materials Science and Engineering</h2>
-        <p><strong>Shelf:</strong> 10</p>
-        <p><strong>Row:</strong> Second row, right side</p>
-      </div>
-
-      <!-- You can continue to add more books up to 100 -->
-    </section>
+    <!-- Book List -->
+    <div class="book-list" id="bookList">
+      <!-- Default books will be shown here -->
+    </div>
   </div>
 
-  <!-- JavaScript Search Function -->
-  <script>
-    function searchBooks() {
-      var input = document.getElementById('searchBar').value.toLowerCase(); // Get search input
-      var books = document.getElementsByClassName('book'); // Get all books
-
-      for (var i = 0; i < books.length; i++) {
-        var bookTitle = books[i].getAttribute('data-name').toLowerCase(); // Get book title
-        if (bookTitle.includes(input)) {
-          books[i].style.display = 'block'; // Show matching books
-        } else {
-          books[i].style.display = 'none'; // Hide non-matching books
-        }
-      }
-    }
-  </script>
-
-</body>
-</html>
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
